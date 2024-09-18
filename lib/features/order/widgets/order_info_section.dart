@@ -134,8 +134,9 @@ class OrderInfoSection extends StatelessWidget {
                 Text('min'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor)),
               ]),
             ),
-            */
+            
                       const SizedBox(height: Dimensions.paddingSizeExtraLarge),
+                      */
                     ])
                   : const SizedBox()
               : const SizedBox(),
