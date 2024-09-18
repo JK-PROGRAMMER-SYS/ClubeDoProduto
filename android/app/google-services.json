@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "148121296226",
+    "project_id": "clubedoproduto-a1564",
+    "storage_bucket": "clubedoproduto-a1564.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148121296226:android:0042bbd7a57d0fcc63e03b",
+        "android_client_info": {
+          "package_name": "com.clubedoproduto.usuario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyfXaTDwWb1vIdEbsnGA5seOIUjEtdCDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
