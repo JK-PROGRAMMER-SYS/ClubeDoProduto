@@ -1,5 +1,5 @@
 import 'package:stackfood_multivendor/features/auth/controllers/auth_controller.dart';
-import 'package:stackfood_multivendor/features/auth/widgets/auth_dialog_widget.dart';
+import 'package:stackfood_multivendor/features/auth/screens/sign_up_screen.dart';
 import 'package:stackfood_multivendor/features/cart/controllers/cart_controller.dart';
 import 'package:stackfood_multivendor/features/language/controllers/localization_controller.dart';
 import 'package:stackfood_multivendor/features/language/widgets/language_bottom_sheet_widget.dart';
@@ -34,6 +34,7 @@ class MenuScreen extends StatefulWidget {
 class _MenuScreenState extends State<MenuScreen> {
   @override
   Widget build(BuildContext context) {
+    bool isDesktop = ResponsiveHelper.isDesktop(context);
     return Scaffold(
       backgroundColor: Theme.of(context).cardColor,
       body: GetBuilder<ProfileController>(builder: (profileController) {
@@ -178,11 +179,19 @@ class _MenuScreenState extends State<MenuScreen> {
                             ? RouteHelper.getProfileRoute()
                             : '',
                         onTap: () {
+                          if (isDesktop) {
+                            Get.back();
+                            Get.dialog(const SignUpScreen(exitFromApp: true));
+                          } else {
+                            Get.toNamed(RouteHelper.getSignUpRoute());
+                          }
+                          /*
                           Get.back();
                           Get.dialog(
                               const Center(
                                   child: AuthDialogWidget(exitFromApp: false, backFromThis: false)),
                               barrierDismissible: false);
+                              */
                         },
                       ),
                       /*
